@@ -2,6 +2,7 @@ package com.example.businessexpensetracker.UI;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,11 +24,16 @@ public class ExpenseAdapter extends RecyclerView.Adapter<ExpenseAdapter.ExpenseV
             super(itemview);
             expenseItemView = itemview.findViewById(R.id.textViewexpensename);
             expenseItemView2 = itemview.findViewById(R.id.textViewexpenseprice);
+
             itemview.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     int position = getAdapterPosition();
                     final Expense current=mExpenses.get(position);
+
+                    // Log the tripID as it's being sent
+                    //Log.d("ExpenseAdapter", "Sending tripID: " + current.getTripID());
+
                     Intent intent = new Intent(context, ExpenseDetails.class);
                     intent.putExtra("id", current.getExpenseID());
                     intent.putExtra("name", current.getExpenseName());

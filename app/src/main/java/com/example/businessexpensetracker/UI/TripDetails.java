@@ -135,7 +135,7 @@ public class TripDetails extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(TripDetails.this, ExpenseDetails.class);
-                //intent.putExtra("tripID", id);
+                intent.putExtra("tripID", id);
                 startActivity(intent);
             }
         });
