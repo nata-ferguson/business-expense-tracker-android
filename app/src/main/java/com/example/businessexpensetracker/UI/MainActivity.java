@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.addSampleData:
                 //test db
-                Trip trip = new Trip(0,"Las Vegas Defcon", 3000, "Flamingo Hotel", "8/10/23", "8/13/23");
+                Trip trip = new Trip(0,"Las Vegas Defcon", 3000, "Flamingo Hotel", "8-10-23", "8-13-23");
                 Repository repository = new Repository(getApplication());
                 repository.insert(trip);
 
-                Expense expense = new Expense(0, "Conference registration", 1000, 1, "8/11/23");
+                Expense expense = new Expense(0, "Conference registration", 1000, 1, "8-11-23");
                 repository.insert(expense);
                 return true;
         }
