@@ -92,15 +92,15 @@ public class ExpenseDetails extends AppCompatActivity {
                                 tripID, expenseDate);
                         repository.insert(expense);
                         Toast.makeText(ExpenseDetails.this, "Expense is saved.", Toast.LENGTH_SHORT).show();
-                        // setResult(Activity.RESULT_OK);
-                        // finish();
+                        setResult(Activity.RESULT_OK);
+                        finish();
                     } else {
                         expense = new Expense(id, editName.getText().toString(), Double.parseDouble(editPrice.getText().toString()),
                                 tripID, expenseDate);
                         repository.update(expense);
                         Toast.makeText(ExpenseDetails.this, "Expense is updated.", Toast.LENGTH_SHORT).show();
-                        // setResult(Activity.RESULT_OK);
-                        // finish();
+                        setResult(Activity.RESULT_OK);
+                        finish();
                     }
                 }
             }

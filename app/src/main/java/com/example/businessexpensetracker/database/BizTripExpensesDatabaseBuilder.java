@@ -11,7 +11,7 @@ import com.example.businessexpensetracker.dao.TripDAO;
 import com.example.businessexpensetracker.entities.Expense;
 import com.example.businessexpensetracker.entities.Trip;
 
-@Database(entities = {Trip.class, Expense.class}, version = 1, exportSchema = false)
+@Database(entities = {Trip.class, Expense.class}, version = 2, exportSchema = false)
 public abstract class BizTripExpensesDatabaseBuilder extends RoomDatabase {
     public abstract TripDAO tripDAO();
     public abstract ExpenseDAO expenseDAO();

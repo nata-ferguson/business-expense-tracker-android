@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -107,12 +108,16 @@ public class TripDetails extends AppCompatActivity {
                                     editLodging.getText().toString(), editStartDate.getText().toString(), editEndDate.getText().toString());
                             repository.insert(trip);
                             Toast.makeText(TripDetails.this, "Trip is saved.", Toast.LENGTH_SHORT).show();
+                            setResult(Activity.RESULT_OK);
+                            finish();
                         }
                         else {
                             trip = new Trip(id, editName.getText().toString(), Double.parseDouble(editBudget.getText().toString()),
                                     editLodging.getText().toString(), editStartDate.getText().toString(), editEndDate.getText().toString());
                             repository.update(trip);
                             Toast.makeText(TripDetails.this, "Trip is updated.", Toast.LENGTH_SHORT).show();
+                            setResult(Activity.RESULT_OK);
+                            finish();
                         }
                     } else {
                         // Show Toast message for invalid end date
@@ -199,16 +204,34 @@ public class TripDetails extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.share:
                 // Create the text to be shared containing trip details
-                String tripDetails = "Trip Name: " + name + "\n" +
-                        "Lodging: " + lodging + "\n" +
-                        "Budget: $" + budget + "\n" +
-                        "Start Date: " + startDate + "\n" +
-                        "End Date: " + endDate;
+
+                StringBuilder tripDetailsBuilder = new StringBuilder();
+
+                tripDetailsBuilder.append("Trip Name: ").append(name).append("\n");
+                tripDetailsBuilder.append("Lodging: ").append(lodging).append("\n");
+                tripDetailsBuilder.append("Budget: $").append(budget).append("\n");
+                tripDetailsBuilder.append("Start Date: ").append(startDate).append("\n");
+                tripDetailsBuilder.append("End Date: ").append(endDate).append("\n\n");
+
+                // Prepare headers for expenses table
+                String headerFormat = "%-20s %-12s %s\n";
+                tripDetailsBuilder.append(String.format(headerFormat, "Expense Title ", "Amount", "Date"));
+
+                // Check each expense's length to make sure everything aligns nicely in the "table"
+                for (Expense exp : repository.getAllExpenses()) {
+                    if (exp.getTripID() == id) {
+                        String expenseFormat = "%-20s $%-9s %s\n";
+                        tripDetailsBuilder.append(String.format(expenseFormat,
+                                truncateString(exp.getExpenseName(), 17), // Limit to 14 characters
+                                exp.getPrice(),
+                                exp.getExpenseDate()));
+                    }
+                }
 
                 // Create the sharing intent
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, tripDetails);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, tripDetailsBuilder.toString());
                 sendIntent.putExtra(Intent.EXTRA_TITLE, "Business Trip Details");
                 sendIntent.setType("text/plain");
 
@@ -306,6 +329,18 @@ public class TripDetails extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private String truncateString(String str, int maxLength) {
+        if (str.length() > maxLength) {
+            return str.substring(0, maxLength - 3) + "..."; // Subtract 3 to account for the dots
+        } else {
+            StringBuilder sb = new StringBuilder(str);
+            while (sb.length() < maxLength) {
+                sb.append(" ");
+            }
+            return sb.toString();
+        }
     }
 
 }
