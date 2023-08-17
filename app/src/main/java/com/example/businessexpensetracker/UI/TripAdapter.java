@@ -2,6 +2,7 @@ package com.example.businessexpensetracker.UI;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,19 +68,25 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
             Trip current = mTrips.get(position);
             String name = current.getTripName();
             holder.tripItemView.setText(name);
+            Log.d("TripAdapter", "Binding trip at position " + position + ": " + name);
         }
         else {
             holder.tripItemView.setText("No Trip Name");
+            Log.d("TripAdapter", "No trips to bind at position " + position);
         }
     }
 
     @Override
     public int getItemCount() {
-        return mTrips.size();
+        if (mTrips != null)
+            return mTrips.size();
+        else
+            return 0;
     }
 
     public void setTrips(List<Trip> trips){
         mTrips = trips;
+        Log.d("TripAdapter", "Updated trip count: " + mTrips.size());
         notifyDataSetChanged();
     }
 
