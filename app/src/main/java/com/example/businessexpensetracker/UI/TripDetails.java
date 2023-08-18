@@ -147,7 +147,7 @@ public class TripDetails extends AppCompatActivity {
 
     }
 
-    private boolean isDateValid(String date) {
+    public boolean isDateValid(String date) {
         SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yy", Locale.US);
         sdf.setLenient(false);
         try {
@@ -155,12 +155,12 @@ public class TripDetails extends AppCompatActivity {
             Date parsedDate = sdf.parse(date);
             return true;
         } catch (ParseException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             return false;
         }
     }
 
-    private boolean isEndDateAfterStartDate(String startDate, String endDate) {
+    public boolean isEndDateAfterStartDate(String startDate, String endDate) {
         SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yy", Locale.US);
         sdf.setLenient(false);
         try {
