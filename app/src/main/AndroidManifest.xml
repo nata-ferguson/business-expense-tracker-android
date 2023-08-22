@@ -13,41 +13,41 @@
         android:theme="@style/Theme.BusinessExpenseTracker"
         tools:targetApi="33">
         <receiver
-            android:name=".UI.MyReceiver"
+            android:name="com.nferg.businessexpensetracker.UI.MyReceiver"
             android:enabled="true"
             android:exported="true"></receiver>
 
         <activity
-            android:name=".UI.ExpenseDetails"
+            android:name="com.nferg.businessexpensetracker.UI.ExpenseDetails"
             android:exported="false"
             android:label="Expense Details"
-            android:parentActivityName=".UI.TripDetails">>
+            android:parentActivityName="com.nferg.businessexpensetracker.UI.TripDetails">>
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".UI.TripDetails"
+            android:name="com.nferg.businessexpensetracker.UI.TripDetails"
             android:exported="false"
             android:label="Trip Details and Expenses List"
-            android:parentActivityName=".UI.TripList">
+            android:parentActivityName="com.nferg.businessexpensetracker.UI.TripList">
             >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".UI.TripList"
+            android:name="com.nferg.businessexpensetracker.UI.TripList"
             android:exported="false"
             android:label="Business Trip List"
-            android:parentActivityName=".UI.MainActivity">
+            android:parentActivityName="com.nferg.businessexpensetracker.UI.MainActivity">
             >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".UI.MainActivity"
+            android:name="com.nferg.businessexpensetracker.UI.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

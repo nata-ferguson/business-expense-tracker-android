@@ -1,4 +1,4 @@
-package com.example.businessexpensetracker.UI;
+package com.nferg.businessexpensetracker.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,10 +9,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.businessexpensetracker.R;
-import com.example.businessexpensetracker.database.Repository;
-import com.example.businessexpensetracker.entities.Expense;
-import com.example.businessexpensetracker.entities.Trip;
+import com.nferg.businessexpensetracker.R;
+import com.nferg.businessexpensetracker.database.Repository;
+import com.nferg.businessexpensetracker.entities.Expense;
+import com.nferg.businessexpensetracker.entities.Trip;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,9 +1,9 @@
-package com.example.businessexpensetracker;
+package com.nferg.businessexpensetracker;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
-import com.example.businessexpensetracker.UI.TripDetails;
+import com.nferg.businessexpensetracker.UI.TripDetails;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

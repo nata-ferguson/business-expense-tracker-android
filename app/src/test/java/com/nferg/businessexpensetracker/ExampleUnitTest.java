@@ -1,4 +1,4 @@
-package com.example.businessexpensetracker;
+package com.nferg.businessexpensetracker;
 
 import org.junit.Test;
 

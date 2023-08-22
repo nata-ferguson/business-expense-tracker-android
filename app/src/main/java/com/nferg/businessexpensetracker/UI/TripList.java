@@ -1,4 +1,4 @@
-package com.example.businessexpensetracker.UI;
+package com.nferg.businessexpensetracker.UI;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,9 +11,9 @@ import android.util.Log;
 import android.view.View;
 import androidx.appcompat.widget.SearchView;
 
-import com.example.businessexpensetracker.R;
-import com.example.businessexpensetracker.database.Repository;
-import com.example.businessexpensetracker.entities.Trip;
+import com.nferg.businessexpensetracker.R;
+import com.nferg.businessexpensetracker.database.Repository;
+import com.nferg.businessexpensetracker.entities.Trip;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;

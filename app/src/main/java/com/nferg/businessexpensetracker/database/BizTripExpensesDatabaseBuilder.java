@@ -1,4 +1,4 @@
-package com.example.businessexpensetracker.database;
+package com.nferg.businessexpensetracker.database;
 
 import android.content.Context;
 
@@ -6,10 +6,10 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.example.businessexpensetracker.dao.ExpenseDAO;
-import com.example.businessexpensetracker.dao.TripDAO;
-import com.example.businessexpensetracker.entities.Expense;
-import com.example.businessexpensetracker.entities.Trip;
+import com.nferg.businessexpensetracker.dao.ExpenseDAO;
+import com.nferg.businessexpensetracker.dao.TripDAO;
+import com.nferg.businessexpensetracker.entities.Expense;
+import com.nferg.businessexpensetracker.entities.Trip;
 
 @Database(entities = {Trip.class, Expense.class}, version = 2, exportSchema = false)
 public abstract class BizTripExpensesDatabaseBuilder extends RoomDatabase {

@@ -1,4 +1,4 @@
-package com.example.businessexpensetracker.dao;
+package com.nferg.businessexpensetracker.dao;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -7,7 +7,7 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.businessexpensetracker.entities.Expense;
+import com.nferg.businessexpensetracker.entities.Expense;
 
 import java.util.List;
 

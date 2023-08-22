@@ -1,14 +1,10 @@
-package com.example.businessexpensetracker.UI;
+package com.nferg.businessexpensetracker.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,10 +12,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.businessexpensetracker.R;
-import com.example.businessexpensetracker.database.Repository;
-import com.example.businessexpensetracker.entities.Expense;
-import com.example.businessexpensetracker.entities.Trip;
+import com.nferg.businessexpensetracker.R;
+import com.nferg.businessexpensetracker.database.Repository;
+import com.nferg.businessexpensetracker.entities.Expense;
+import com.nferg.businessexpensetracker.entities.Trip;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

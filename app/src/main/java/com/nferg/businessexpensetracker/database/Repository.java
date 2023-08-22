@@ -1,11 +1,11 @@
-package com.example.businessexpensetracker.database;
+package com.nferg.businessexpensetracker.database;
 
 import android.app.Application;
 
-import com.example.businessexpensetracker.dao.ExpenseDAO;
-import com.example.businessexpensetracker.dao.TripDAO;
-import com.example.businessexpensetracker.entities.Expense;
-import com.example.businessexpensetracker.entities.Trip;
+import com.nferg.businessexpensetracker.dao.ExpenseDAO;
+import com.nferg.businessexpensetracker.dao.TripDAO;
+import com.nferg.businessexpensetracker.entities.Expense;
+import com.nferg.businessexpensetracker.entities.Trip;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;

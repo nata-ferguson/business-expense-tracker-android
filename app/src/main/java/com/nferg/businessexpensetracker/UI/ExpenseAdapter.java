@@ -1,8 +1,7 @@
-package com.example.businessexpensetracker.UI;
+package com.nferg.businessexpensetracker.UI;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.businessexpensetracker.R;
-import com.example.businessexpensetracker.entities.Expense;
+import com.nferg.businessexpensetracker.R;
+import com.nferg.businessexpensetracker.entities.Expense;
 
 import java.util.List;
 

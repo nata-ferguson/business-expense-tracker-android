@@ -1,4 +1,4 @@
-package com.example.businessexpensetracker.entities;
+package com.nferg.businessexpensetracker.entities;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

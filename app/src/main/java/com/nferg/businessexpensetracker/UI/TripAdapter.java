@@ -1,4 +1,4 @@
-package com.example.businessexpensetracker.UI;
+package com.nferg.businessexpensetracker.UI;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,8 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.businessexpensetracker.R;
-import com.example.businessexpensetracker.entities.Trip;
+import com.nferg.businessexpensetracker.R;
+import com.nferg.businessexpensetracker.entities.Trip;
 
 import java.util.List;
 

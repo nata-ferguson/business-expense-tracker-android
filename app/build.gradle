@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.businessexpensetracker'
+    namespace 'com.nferg.businessexpensetracker'
     compileSdk 33
 
     defaultConfig {
