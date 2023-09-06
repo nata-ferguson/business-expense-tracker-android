@@ -1,10 +1,4 @@
-Software Engineering Capstone - D424
-
-Student: Natasha Ferguson (ID: 005473366)
-
-Project Name: Business Expense Tracking Application
-
-applicationId: "com.example.businessexpensetracker"
+Project Name: Business Expense Tracking Android Application
 
 minSdk: 26
 
@@ -15,5 +9,3 @@ versionCode: 1
 versionName: "1.0"
 
 Google Play Store: https://play.google.com/store/apps/details?id=com.nferg.businessexpensetracker
-
-Select a branch named 'master'
