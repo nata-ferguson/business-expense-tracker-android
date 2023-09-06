@@ -14,6 +14,6 @@ versionCode: 1
 
 versionName: "1.0"
 
-GitLab Repository: https://gitlab.com/wgu-gitlab-environment/student-repos/nferg/d424-software-engineering-capstone/-/tree/master
+Google Play Store: https://play.google.com/store/apps/details?id=com.nferg.businessexpensetracker
 
 Select a branch named 'master'
